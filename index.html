@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Koree Nana Asare</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" href="assets/images/favicon.png" />
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <h1 class="logo">Koree Nana Asare</h1>
+      <ul class="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#resume" data-section="resume">Resume</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="section">
+    <div class="content">
+      <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-pic" loading="lazy" />
+      <div>
+        <h2>About Me</h2>
+        <p>Hello! I'm Koree Nana Asare, a front-end developer passionate about crafting clean, responsive, and intuitive web experiences. I focus on user-friendly interfaces, performance, and modern design to bring ideas to life on the web.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript (ES6)</li>
+      <li>React</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/images/project1.png" alt="Task Manager App" loading="lazy" />
+        <h3>Task Manager App</h3>
+        <p>Built with Vanilla JS, HTML, and CSS; allows users to add/delete tasks, store them in local storage, and interact with a clean, intuitive UI.<br>
+            🔹 Challenge: Managing persistent tasks between sessions.<br>
+            🔹 Solution: Implemented local Storage to retain tasks, improving usability.</p>
+        <a href="https://github.com/asare4/vanilla-js-task-manager" class="btn" target="_blank" aria-label="View Task Manager App on GitHub">View on GitHub</a>
+        <a href="https://asare4.github.io/vanilla-js-task-manager/?" class="btn" target="_blank" aria-label="Live Demo of Task Manager App">Live Demo</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/images/project2.png" alt="Notes App" loading="lazy" />
+        <h3>Notes App</h3>
+        <p>Built with JavaScript, HTML, and CSS to let users write, view, and manage notes in a simple, responsive UI.<br>
+            🔹 Challenge: Manage dynamic UI updates efficiently.<br>
+            🔹 Solution: Leveraged React state management to re-render tasks smoothly, ensuring a seamless user experience.</p>
+        <a href="https://github.com/asare4/Web-Dev-projects/tree/main/notes-app" class="btn" target="_blank" aria-label="View Notes App on GitHub">View on GitHub</a>
+        <a href="https://asare4.github.io/Web-Dev-projects/notes-app/notes.html?" class="btn" target="_blank" aria-label="Live Demo of Notes App">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p>Download my latest resume below:</p>
+    <a href="assets/resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Let’s connect! I’m always open to collaborations, freelance opportunities, or just a friendly chat about web development. Reach me via email or LinkedIn — I’d love to hear from you!</p>
+    <div class="contact-links">
+      <a href="mailto:asare.ee4@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nana-asare-koree-7b5116295" target="_blank">LinkedIn</a>
+      <a href="https://github.com/asare4" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" title="Go to top">↑</button>
+
+  <footer>
+    <p>© 2025 Koree Nana Asare. All rights reserved.</p>
+  </footer>
+</body>
+</html>
