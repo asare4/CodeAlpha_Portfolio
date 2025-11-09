@@ -1,0 +1,361 @@
+/* -----------------------------
+Global Styles
+----------------------------- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #0d1117;
+color: #e6edf3;
+line-height: 1.6;
+}
+
+/* Accent Colors */
+:root {
+--accent: #00b4d8;
+--accent-light: #90e0ef;
+--bg-dark: #0d1117;
+--bg-card: #161b22;
+}
+
+/* -----------------------------
+    Navbar
+----------------------------- */
+header {
+background: #161b22;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+max-width: 1200px;
+margin: auto;
+}
+
+.logo {
+font-size: 1.5rem;
+color: var(--accent);
+font-weight: 600;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1.5rem;
+}
+
+.nav-links a {
+color: #e6edf3;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+.nav-links a:hover {
+color: var(--accent);
+}
+
+/* -----------------------------
+    Sections
+----------------------------- */
+.section {
+padding: 4rem 2rem;
+max-width: 1100px;
+margin: auto;
+}
+
+.section h2 {
+color: var(--accent);
+font-size: 1.8rem;
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+/* -----------------------------
+    About Section
+----------------------------- */
+#about .content {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 2rem;
+}
+
+.profile-pic {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid var(--accent);
+box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+}
+
+/* -----------------------------
+    Skills Section
+----------------------------- */
+.skills-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+
+.skills-list li {
+background: var(--bg-card);
+padding: 0.8rem 1.5rem;
+border-radius: 8px;
+color: var(--accent-light);
+font-weight: 500;
+transition: background 0.3s;
+}
+
+.skills-list li:hover {
+background: var(--accent);
+color: #fff;
+}
+
+/* -----------------------------
+    Projects Section
+----------------------------- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,180,216,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,180,216,0.35);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+color: var(--accent-light);
+margin: 1rem;
+}
+
+.project-card p {
+font-size: 0.9rem;
+margin: 0 1rem 1rem;
+color: #c9d1d9;
+}
+
+.btn {
+display: inline-block;
+background: var(--accent);
+color: #fff;
+padding: 0.6rem 1.2rem;
+border-radius: 5px;
+text-decoration: none;
+font-weight: 500;
+margin: 1rem;
+transition: background 0.3s;
+}
+
+.btn:hover {
+background: var(--accent-light);
+color: #0d1117;
+}
+
+/* -----------------------------
+    Resume Section
+----------------------------- */
+#resume {
+text-align: center;
+}
+
+/* -----------------------------
+    Contact Section
+----------------------------- */
+.contact-links {
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+margin-top: 1rem;
+}
+
+.contact-links a {
+color: var(--accent-light);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+.contact-links a:hover {
+color: var(--accent);
+}
+
+/* -----------------------------
+    Footer
+----------------------------- */
+footer {
+background: #161b22;
+text-align: center;
+padding: 1.5rem 0;
+font-size: 0.9rem;
+color: #8b949e;
+}
+
+/* -----------------------------
+Scroll Animation Effects
+----------------------------- */
+.section {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* -----------------------------
+Scroll To Top Button
+----------------------------- */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+    transition: background 0.3s, transform 0.3s;
+    z-index: 999;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+}
+
+#scrollToTop:hover {
+background: var(--accent-light);
+color: #0d1117;
+transform: translateY(-4px);
+}
+
+#scrollToTop.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills Hover Enhancement */
+.skills-list li:hover {
+    transform: scale(1.1);
+}
+
+/* Section Reveal Smoothness */
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Button Enhancements */
+.btn {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,180,216,0.4);
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+
+/* -----------------------------
+    Responsive Design
+----------------------------- */
+@media (max-width: 768px) {
+.navbar {
+    flex-direction: column;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about .content {
+    flex-direction: column;
+}
+}
+
+
+/* Floating animation keyframes */
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+/* Apply to profile picture */
+.profile-pic {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Apply to project cards with slight delay for staggered effect */
+.project-card:nth-child(odd) {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.project-card:nth-child(even) {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0) scale(1); }
+50% { transform: translateY(-10px) scale(1.02); }
+}
