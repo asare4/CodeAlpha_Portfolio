@@ -1,6 +1,6 @@
 # Koree Nana Asare Portfolio
 
-![Portfolio Screenshot](assets/images/project1.png)
+![Portfolio Screenshot](assets/images/1.png)
 
 ## Overview
 
